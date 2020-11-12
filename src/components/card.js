@@ -5,19 +5,19 @@ import Button from "./button.js"
 import "./card.css"
 import "../styles/global.css"
 
-const data = [
-    {
-        question: "",
-        choice : {
-            text: "",
-            value:""            
-        },
-        choice : {
-            text: "",
-            value:"",
-        }
-    }
-]
+// const data = [
+//     {
+//         question: "",
+//         choice : {
+//             text: "",
+//             value:""            
+//         },
+//         choice : {
+//             text: "",
+//             value:"",
+//         }
+//     }
+// ]
 
     
 function Card({ text, choice1, choice2 }) {
@@ -25,8 +25,8 @@ function Card({ text, choice1, choice2 }) {
   return (
     <div>
         <h2>{text}</h2>
-        <Button text = {choice1}/>
-        <Button text = {choice2}/>
+          <Button text={choice1} value='a'/>
+        <Button text = {choice2} value='b'/>
     </div>
   )
 }
