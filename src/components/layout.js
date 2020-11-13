@@ -19,7 +19,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      
       {/* <Header siteTitle={`나와 닮은 위인 찾기`} /> */}
       <div
         style={{
