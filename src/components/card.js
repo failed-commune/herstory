@@ -34,7 +34,7 @@ const Card = ({}) => {
 
 
     useEffect(() => {
-        if (cardIndex == 3)
+        if (cardIndex === 3)
             console.log("last index");
             
     }, [cardIndex]);
@@ -50,9 +50,9 @@ const Card = ({}) => {
         <div>
             <h2>{answer}</h2>
             {cardIndex === 4 ? <Link to= '/result/' state={ {props: answer} }>결과보기</Link> : <div><h2>{data[cardIndex].text}</h2>
-            <button onClick={() => add('a')}>{data[cardIndex].answer1}</button>
-            <button onClick={() => add('b')}>{data[cardIndex].answer2}</button></div>
-}
+                <button onClick={() => add('a')}>{data[cardIndex].answer1}</button>
+                <button onClick={() => add('b')}>{data[cardIndex].answer2}</button></div>
+            }
         </div>
     );
 }

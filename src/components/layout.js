@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
           marginTop: `2rem`,
         }}>
           {' by '} 
-          <a href=""> Jam & Bread</a>
+          <a href="https://github.com/failed-commune"> Jam & Bread</a>
           <br></br>
           {'powered by '}
           <a href="https://github.com/failed-commune">Hanseul</a>
