@@ -5,32 +5,42 @@ import Button from "./button.js"
 import "./card.css"
 import "../styles/global.css"
 
-// const data = [
-//     {
-//         question: "",
-//         choice : {
-//             text: "",
-//             value:""            
-//         },
-//         choice : {
-//             text: "",
-//             value:"",
-//         }
-//     }
-// ]
+const data = [
+    {
+        question: "",
+        choice : {
+            text: "",
+            value:""            
+        },
+        choice : {
+            text: "",
+            value:"",
+        }
+    }
+]
 
-    
-function Card({ text, choice1, choice2 }) {
+class Card extends React.Component{
 
-  return (
-    <div>
-        <h2>{text}</h2>
-          <Button text={choice1} value='a'/>
-        <Button text = {choice2} value='b'/>
-    </div>
-  )
+    turnCard = () => {
+
+    }
+
+    render() {
+        return (
+            <div>
+                <h2>{this.props.text}</h2>
+                <Button text={this.props.choice1} value='a' />
+                <Button text={this.props.choice2} value='b' />
+            </div>
+        );
+    }
 }
 
+Card.defaultProps = {
+    text: 'Default text',
+    choice1: 'choice1',
+    choice2: 'choice2',
+};
 
 Card.propTypes = {
   text: PropTypes.string.isRequired,

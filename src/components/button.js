@@ -14,9 +14,13 @@ class Button extends React.Component {
  
   render() {
     return (
-      <div>
-          <button onClick={this.add}>{this.state.answer}{this.props.text}</button>
-      </div>
+        <div>
+          <button onClick={this.add}>{this.props.text}</button>
+            <h3>
+                {this.state.answer}
+            </h3>
+        </div>
+        
     );
   }
 
