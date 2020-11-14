@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react"
+import React, { useEffect, useState } from "react"
 import "./card.css"
 import "../styles/global.css"
 import { Link } from "gatsby"
 
-const Card = ({}) => {
+const Card = () => {
     //질문 답변 세트
     const data = [
         {
@@ -32,11 +32,9 @@ const Card = ({}) => {
     const [answer, setAnswer] = useState('');
     const [cardIndex, setCardIndex] = useState(0);
 
-
     useEffect(() => {
-        if (cardIndex == 3)
+        if (cardIndex === 3)
             console.log("last index");
-            
     }, [cardIndex]);
 
     function add(value) {
@@ -49,10 +47,10 @@ const Card = ({}) => {
     return (
         <div>
             <h2>{answer}</h2>
-            {cardIndex === 4 ? <Link to= '/result/' state={ {props: answer} }>결과보기</Link> : <div><h2>{data[cardIndex].text}</h2>
-            <button onClick={() => add('a')}>{data[cardIndex].answer1}</button>
-            <button onClick={() => add('b')}>{data[cardIndex].answer2}</button></div>
-}
+            {cardIndex === 4 ? <Link to='/result/' state={{ props: answer }}>결과보기</Link> : <div><h2>{data[cardIndex].text}</h2>
+                <button onClick={() => add('a')}>{data[cardIndex].answer1}</button>
+                <button onClick={() => add('b')}>{data[cardIndex].answer2}</button></div>
+            }
         </div>
     );
 }

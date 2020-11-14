@@ -1,14 +1,15 @@
-import React, {useEffect, useState} from "react"
+import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
 const Result = ({ location }) => {
+  if (!location.state) return <div />
 
   //사용자 대답
   const answer = location.state.props;
-  const answerNo = (answer == 'aaaa' ? 0 : 1)
+  const answerNo = (answer === 'aaaa' ? 0 : 1)
 
   const data = [
     {
@@ -24,7 +25,7 @@ const Result = ({ location }) => {
       <h1>당신과 닮은 위인은</h1>
       <p>{data[answerNo].name}</p>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+        <Image />
       </div>
       <div>{location.state.props}</div>
       <Link to="/result/">Go back to the homepage</Link>
