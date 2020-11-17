@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import "./card.css"
-import "../styles/global.css"
 import { Link } from "gatsby"
 
 const Card = () => {
@@ -46,9 +45,8 @@ const Card = () => {
 
     return (
         <div>
-            <h2>{answer}</h2>
-            {cardIndex === 4 ? <Link to='/result/' state={{ props: answer }}>결과보기</Link> : <div><h2>{data[cardIndex].text}</h2>
-                <button onClick={() => add('a')}>{data[cardIndex].answer1}</button>
+            {cardIndex === 4 ? <Link to='/result/' state={{ props: answer }} className="toResult">결과보기</Link> : <div><h2 className="question">{data[cardIndex].text}</h2>
+                <button onClick={() => add('a')}>{data[cardIndex].answer1}</button><br/>
                 <button onClick={() => add('b')}>{data[cardIndex].answer2}</button></div>
             }
         </div>

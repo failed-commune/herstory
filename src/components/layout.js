@@ -2,9 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
 
-// import Header from "./header"
 import "./layout.css"
-import "../styles/global.css"
 
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
@@ -19,7 +17,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      {/* <Header siteTitle={`나와 닮은 위인 찾기`} /> */}
       <div
         style={{
           margin: `2rem auto`,
@@ -28,18 +25,12 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer style={{
-          
-          marginTop: `2rem`,
-        }}>
-          {' by '} 
-          <a href=""> Jam & Bread</a>
-          <br></br>
+        {/* <footer style={{ marginTop: `2rem`}}>
           {'powered by '}
           <a href="https://github.com/failed-commune">Hanseul</a>
           <br></br>
           © {new Date().getFullYear()} 
-        </footer>
+        </footer> */}
       </div>
     </>
   )
