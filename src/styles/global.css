@@ -1,5 +1,10 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
 html {
   background-image: url('../images/bg_1.jpeg');
+  height: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font: 112.5%/1.45em georgia, serif, sans-serif;
@@ -10,13 +15,16 @@ html {
   padding: 0;
 }
 
-
 body {
+    height: 90%;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'Black Han Sans', sans-serif;
+  font: 112.5%/1.45em;
+  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -24,4 +32,45 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+.startButton{
+    margin-top: auto;
+    width: 272px;
+    height: 59px;
+    border-radius: 9px;
+    color: white;
+    font-family: 'Black Han Sans', sans-serif;
+    background-color: #413535;
+    position: sticky;
+    
+}
+
+.startButton:focus{
+    background-color:white;
+    color: black;
+}
+
+.againButton{
+    margin-top: auto;
+    color: black;
+    font-family: 'Black Han Sans', sans-serif;
+    font-weight: normal;
+    font-size: 1.5rem;
+    position: sticky;
+    
+}
+
+.question{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.toResult{
+    display: block;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 2rem;
+    color: white;
+    margin-top: 45vh;
+    padding-bottom: 2rem;
 }
